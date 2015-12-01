@@ -8,7 +8,8 @@ def get_stop():
 	return stop_words
 
 def get_idf():
-	raw_string = open("idf_training.txt").read()
+	raw_string = open("idf_training.txt",'r')
+	print(raw_string)
 	idf_dict = {}
 	for line in raw_string:
 		sline = line.split()
@@ -16,5 +17,6 @@ def get_idf():
 			print("Something wrong, idf_trained file line != 2")
 			continue
 		idf_dict[sline[0]] = sline[1]
+	return idf_dict
 
-
+#print(get_idf())
