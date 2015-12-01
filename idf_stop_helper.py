@@ -16,7 +16,7 @@ def get_idf():
 		if len(sline) != 2:
 			print("Something wrong, idf_trained file line != 2")
 			continue
-		idf_dict[sline[0]] = sline[1]
+		idf_dict[str(sline[0])] = float(sline[1])
 	return idf_dict
 
 #print(get_idf())
