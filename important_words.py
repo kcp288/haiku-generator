@@ -37,8 +37,6 @@ def wordlist_list_helper(l,N):
 	i = 0
 	out_array = [None]*N
 	for word in sorted(tfidf, key=tfidf.get, reverse = True):
-		print(i)
-		print(word)
 		out_array[i] = word
 		i +=1
 		if i >= N:

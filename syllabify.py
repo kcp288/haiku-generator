@@ -16,7 +16,7 @@ def count_syllables(sentence):
 	# Change to upper case, split input string into words
 	sentence = [i.upper() for i in sentence]
 	
-	print "converted:", sentence
+	#print ("converted:", sentence)
 
 	# words = sentence.upper()
 
@@ -28,7 +28,7 @@ def count_syllables(sentence):
 				if i in line:
 					# If true: word by itself
 					if re.findall("\\b"+i+"\\b", line):
-						print line
+						#print line
 						# Calculate number of syllables in word
 						num_in_word = num_syllables(line)
 						syllable_count.append(num_in_word)
@@ -38,6 +38,7 @@ def count_syllables(sentence):
 					# Else, word within words--we don't want this
 					else: 
 						continue
+				else: syllable_count.append(0)
 						
 	return syllable_count
 
