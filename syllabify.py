@@ -38,6 +38,8 @@ def count_syllables(sentence):
 					# Else, word within words--we don't want this
 					else: 
 						continue
+				else:
+					return None
 
 	return syllable_count
 
