@@ -23,6 +23,7 @@ def count_syllables(sentence):
 	syllable_count = []
 	# Loop thru words and count
 	for i in sentence:
+		found = False
 		with open('./modified-cmu-new.txt', 'r') as myFile:
 			for num, line in enumerate(myFile, 1):
 				if i in line:
@@ -34,14 +35,17 @@ def count_syllables(sentence):
 						syllable_count.append(num_in_word)
 						# Add to line count
 						#syb_count = syb_count + num_in_word
+						found = True
+						break
 
 					# Else, word within words--we don't want this
 					else: 
 						continue
-				else:
-					return None
 
-	return syllable_count
+		if not found:
+			return None 
+
+	else: return syllable_count
 
 def num_syllables(line):
 	s = line.split()
