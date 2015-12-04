@@ -16,7 +16,7 @@ def get_lines(t,sentences):
 				first_line.append(sent[j])
 			five.pop(i)
 			sev.pop(i)
-			sentence.pop(i)
+			sentences.pop(i)
 			break
 	for i in range(0,len(five)):
 		if len(five[i]) > 0:
@@ -26,7 +26,7 @@ def get_lines(t,sentences):
 				sec_line.append(sent[j])
 			five.pop(i)
 			sev.pop(i)
-			sentence.pop(i)
+			sentences.pop(i)
 			break
 	for i in range(0,len(five)):
 		if len(five[i]) > 0:
@@ -36,7 +36,7 @@ def get_lines(t,sentences):
 				third_line.append(sent[j])
 			five.pop(i)
 			sev.pop(i)
-			sentence.pop(i)
+			sentences.pop(i)
 			break
 	return [first_line,sec_line,third_line]
 
