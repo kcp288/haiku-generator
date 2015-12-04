@@ -6,7 +6,7 @@ input: list of syllable of all sentences, where each entry corresponds to list o
 
 output: tuple (five_syll,seven_syll)
 	where five_syll/seven_syll are lists of tuples for offsets (the count does include jth word)
-	i.e. five_syll = [(i1,j1),(i2,j2),...]
+	i.e. five_syll = [[(i1,j1),(i2,j2),...],...]
 """
 
 def find_haiku(syllables):
