@@ -9,7 +9,7 @@ def get_lines(t,sentences):
 	sec_line = []
 	third_line = []
 	for i in range(0,len(five)):
-		if len(five[i] > 0):
+		if len(five[i]) > 0):
 			tup = five[i][0]
 			sent = sentences[i]
 			for j in range(tup[0],tup[1]+1):
@@ -19,7 +19,7 @@ def get_lines(t,sentences):
 			sentence.pop(i)
 			break
 	for i in range(0,len(five)):
-		if len(five[i] > 0):
+		if len(five[i]) > 0):
 			tup = sev[i][0]
 			sent = sentences[i]
 			for j in range(tup[0],tup[1]+1):
@@ -29,7 +29,7 @@ def get_lines(t,sentences):
 			sentence.pop(i)
 			break
 	for i in range(0,len(five)):
-		if len(five[i] > 0):
+		if len(five[i]) > 0):
 			tup = five[i][0]
 			sent = sentences[i]
 			for j in range(tup[0],tup[1]+1):
