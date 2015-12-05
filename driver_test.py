@@ -14,10 +14,11 @@ def drive():
 
 	# Get sentences with words
 	# INPUT VERSION
-	f = sys.stdin.readline()
+	# f = sys.stdin.readline()
 
 	# FILE IO VERSION
-	#f = open('practice2.txt').read()
+	# print f
+	f = open('practice2.txt').read()
 	important_sentences, counts = sent_parser.parse_sent(f)
 
 	offsets = haiku_algorithm.find_haiku(counts)
@@ -27,7 +28,7 @@ def drive():
 	output = ''
 	for i in lines:
 		line = ' '.join([str(x) for x in i])
-		output += line + ' * '
+		output += line + '\n'
 
 	print output
 	
@@ -35,3 +36,9 @@ def drive():
 
 
 drive()
+
+def main():
+
+  drive()
+
+main()

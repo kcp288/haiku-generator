@@ -2,7 +2,7 @@ import important_words,re,syllabify,sys
 
 def parse_sent(s):
 
-	IW = important_words.wordlist_string(s,10)
+	IW = important_words.wordlist_string(s,5)
 
 	list_doc = re.split('\.|,',s)
 	sentences = []
@@ -18,13 +18,13 @@ def parse_sent(s):
 				sent_syllables.append(syllables)
 				break
 
-
 	if len(sentences) <3:
-		print('Error not enough sentences')
+		# print('Error not enough sentences')
 		return None
 	return (sentences,sent_syllables)
 
-"""
+
+'''
 raw = open('practice.txt').read()
 
 t = parse_sent(raw)
@@ -42,6 +42,6 @@ for i in range(0,6):
 	print(sent[i])
 	print(syll[i])
 print(len(sent))
-"""	
+'''
 
 

@@ -4,6 +4,7 @@
 
 import re
 import string
+import syllable_estimator
 
 # Count syllab
 
@@ -24,7 +25,7 @@ def count_syllables(sentence):
 	# Loop thru words and count
 	for i in sentence:
 		found = False
-		with open('./modified-cmu-new.txt', 'r') as myFile:
+		with open('modified-cmu-new.txt', 'r') as myFile:
 			for num, line in enumerate(myFile, 1):
 				if i in line:
 					# If true: word by itself
@@ -43,7 +44,11 @@ def count_syllables(sentence):
 						continue
 
 		if not found:
-			return None 
+			if i.isalnum():
+				num_in_word = syllable_estimator.estimate(i);
+				print num_in_word
+				syllable_count.append(num_in_word)
+			else: return None 
 
 	else: return syllable_count
 
