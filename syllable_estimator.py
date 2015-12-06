@@ -10,7 +10,7 @@ def estimate(s):
 	i = 0
 	while i < len(word) and word[i] in vowels:
 		if word[i] in vowels:
-			while word[i] in vowels:
+			while (i < len(word)) & (word[i] in vowels):
 				i +=1
 			est +=1
 		i +=1
