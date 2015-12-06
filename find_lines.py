@@ -9,8 +9,7 @@ def get_lines(t,sentences,important):
 	sec_line = []
 	third_line = []
 	i =0
-	while i < len(five):
-		# Bug because I modify length of five in the loop
+	while i < len(five) & len(first_line) == 0:
 		for k in range(0,len(five[i])):
 			if len(five[i]) > 0:
 				tup = five[i][k]
@@ -26,7 +25,7 @@ def get_lines(t,sentences,important):
 					first_line = []
 		i +=1
 	i =0
-	while i < len(sev):
+	while i < len(sev) & len(sec_line) == 0:
 		for k in range(0,len(sev[i])):
 			if len(sev[i]) > 0:
 				tup = sev[i][k]
@@ -42,7 +41,7 @@ def get_lines(t,sentences,important):
 					sec_line = []
 		i +=1
 	i=0
-	while i < len(five):
+	while i < len(five) & len(third_line) == 0:
 		for k in range(0,len(five[i])):
 			if len(five[i]) > 0:
 				tup = five[i][k]
