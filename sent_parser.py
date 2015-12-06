@@ -1,8 +1,6 @@
 import important_words,re,syllabify,sys
 
-def parse_sent(s):
-
-	IW = important_words.wordlist_string(s,5)
+def parse_sent(s, IW):
 
 	list_doc = re.split('\.|,',s)
 	sentences = []
