@@ -16,7 +16,7 @@ def drive():
 	# INPUT VERSION
 	f = sys.stdin.readline()
 	if len(f) < 5:
-		print ''
+		print ('')
 		return None
 
 	important_sentences, counts = sent_parser.parse_sent(f)
@@ -30,7 +30,7 @@ def drive():
 		line = ' '.join([str(x) for x in i])
 		output += line + ' * '
 
-	print output
+	print (output)
 	
 	return output
 
