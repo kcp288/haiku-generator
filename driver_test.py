@@ -32,7 +32,7 @@ def drive():
 		line = ' '.join([str(x) for x in i])
 		output += line + '\n'
 
-	print output
+	print (output)
 	
 	return output
 
