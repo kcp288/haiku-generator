@@ -18,7 +18,7 @@ def parse_sent(s):
 				sent_syllables.append(syllables)
 				break
 
-	if len(sentences) <3:
+	if len(sentences) < 3:
 		# print('Error not enough sentences')
 		return None
 	return (sentences,sent_syllables)

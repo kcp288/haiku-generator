@@ -15,9 +15,10 @@ def drive():
 	# Get sentences with words
 	# INPUT VERSION
 	f = sys.stdin.readline()
+	if len(f) < 5:
+		print ''
+		return None
 
-	# FILE IO VERSION
-	#f = open('practice2.txt').read()
 	important_sentences, counts = sent_parser.parse_sent(f)
 
 	offsets = haiku_algorithm.find_haiku(counts)
