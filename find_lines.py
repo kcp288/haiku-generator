@@ -17,7 +17,8 @@ def get_lines(t,sentences,important):
 				sent = sentences[i]
 				for j in range(tup[0],tup[1]+1):
 					first_line.append(sent[j])
-				if check_important(first_line,important):
+				if check_important(first_line,important) != None:
+					important.remove(check_important(first_line,important))
 					five.pop(i)
 					sev.pop(i)
 					sentences.pop(i)
@@ -36,7 +37,8 @@ def get_lines(t,sentences,important):
 				sent = sentences[i]
 				for j in range(tup[0],tup[1]+1):
 					sec_line.append(sent[j])
-				if check_important(sec_line,important):
+				if check_important(sec_line,important) != None:
+					important.remove(check_important(sec_line,important))
 					five.pop(i)
 					sev.pop(i)
 					sentences.pop(i)
@@ -55,7 +57,8 @@ def get_lines(t,sentences,important):
 				sent = sentences[i]
 				for j in range(tup[0],tup[1]+1):
 					third_line.append(sent[j])
-				if check_important(third_line,important):
+				if check_important(third_line,important) != None:
+					important.remove(check_important(third_line,important))
 					five.pop(i)
 					sev.pop(i)
 					sentences.pop(i)
@@ -70,8 +73,8 @@ def get_lines(t,sentences,important):
 def check_important(l,important):
 	for w in l:
 		if w in important:
-			return True
-	return False
+			return w
+	return None
 
 """
 sentences = [['we','are','your','friends','dont','ever','go','against'],['you','are','my','lightning','in','a','bottle'],['last','sentence','very','short']]
@@ -85,6 +88,7 @@ print(out[0])
 print(out[1])
 print(out[2])
 """
+
 
 
 #Idea for a better evaluation of which sentences are better pending
