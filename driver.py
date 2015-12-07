@@ -25,6 +25,11 @@ def drive():
 	
 	lines = find_lines.get_lines(offsets, important_sentences, important_word)
 
+	for i in lines:
+		if len(i)==0:
+			print ('')
+			return None
+
 	output = ''
 	for i in lines:
 		line = ' '.join([str(x) for x in i])
