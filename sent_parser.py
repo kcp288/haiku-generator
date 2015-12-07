@@ -2,7 +2,8 @@ import important_words,re,syllabify,sys
 
 def parse_sent(s, IW):
 
-	list_doc = re.split('\.|,',s)
+	#list_doc = re.split('\.|,',s)
+    list_doc = s.split('.')
 	sentences = []
 	sent_syllables = []
 	for sent in list_doc:
