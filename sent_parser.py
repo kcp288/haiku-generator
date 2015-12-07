@@ -2,12 +2,17 @@ import important_words,re,syllabify,sys
 
 def parse_sent(s, IW):
 
-	list_doc = re.split('\.|,',s)
+	#list_doc = re.split('\.|,',s)
+	s = re.sub('\,', "", s)
+	list_doc = s.split('.')
+
 	sentences = []
 	sent_syllables = []
 	for sent in list_doc:
 		l = sent.split()
+
 		for word in l:
+
 			if word.lower() in IW:
 				syllables = syllabify.count_syllables(l)
 				if syllables == None:

@@ -13,5 +13,7 @@ def estimate(s):
 			while (i < len(word)) & (word[i] in vowels):
 				i +=1
 			est +=1
+		if i < len(word):
+			break
 		i +=1
 	return est

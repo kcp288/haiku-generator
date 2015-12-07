@@ -18,7 +18,7 @@ def drive():
 	if len(f) < 5:
 		print ('')
 		return None
-	important_word = important_words.wordlist_string(f,5)
+	important_word = important_words.wordlist_string(f,10)
 	important_sentences, counts = sent_parser.parse_sent(f, important_word)
 
 	offsets = haiku_algorithm.find_haiku(counts)
