@@ -46,7 +46,6 @@ def count_syllables(sentence):
 		if not found:
 			if i.isalnum():
 				num_in_word = syllable_estimator.estimate(i);
-				print (num_in_word)
 				syllable_count.append(num_in_word)
 			else: return None 
 

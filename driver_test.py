@@ -18,7 +18,7 @@ def drive():
 
 	# FILE IO VERSION
 	# print f
-	f = open('practice2.txt').read()
+	f = open('sample.txt').read()
 
 	important_word = important_words.wordlist_string(f,5)
 	important_sentences, counts = sent_parser.parse_sent(f, important_word)
@@ -36,8 +36,6 @@ def drive():
 	
 	return output
 
-
-drive()
 
 def main():
 

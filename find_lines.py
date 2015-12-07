@@ -50,7 +50,6 @@ def get_lines(t,sentences,important):
 	i=0
 	while i < len(five) :
 		for k in range(0,len(five[i])):
-			print('something')
 			if len(five[i]) > 0:
 				tup = five[i][k]
 				sent = sentences[i]
