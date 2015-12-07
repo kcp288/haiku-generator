@@ -44,9 +44,8 @@ def count_syllables(sentence):
 						continue
 
 		if not found:
-			if i.isalnum():
+			if i.isalpha() or (re.match("/[^a-zA-Z'-]+/", i) != None):
 				num_in_word = syllable_estimator.estimate(i);
-				print (num_in_word)
 				syllable_count.append(num_in_word)
 			else: return None 
 

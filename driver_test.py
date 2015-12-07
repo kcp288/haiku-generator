@@ -20,12 +20,18 @@ def drive():
 	# print f
 	f = open('practice2.txt').read()
 
-	important_word = important_words.wordlist_string(f,5)
+	important_word = important_words.wordlist_string(f,10)
+	print (important_word)
 	important_sentences, counts = sent_parser.parse_sent(f, important_word)
-
+	print (important_sentences)
 	offsets = haiku_algorithm.find_haiku(counts)
 	
 	lines = find_lines.get_lines(offsets, important_sentences, important_word)
+	
+	for i in lines:
+		if len(i)==0:
+			print ('None')
+			#return None
 
 	output = ''
 	for i in lines:
@@ -36,8 +42,6 @@ def drive():
 	
 	return output
 
-
-drive()
 
 def main():
 
